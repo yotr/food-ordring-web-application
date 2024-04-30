@@ -7,7 +7,7 @@
 - npm install -g @angular/cli
 - ng serve
 ```
-## Application View Web
+<!-- ## Application View Web
 ### Home
 ![Alt text](front-end/public/home.png)
 
@@ -24,4 +24,4 @@
 
 ## Application View Mobile
 ### Mobile
-![Alt text](public/mobile.png)
+![Alt text](public/mobile.png) -->
