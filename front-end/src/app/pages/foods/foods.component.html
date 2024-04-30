@@ -1,0 +1,21 @@
+<div class="container">
+  <!-- search components -->
+  <app-search></app-search>
+  <!-- search components -->
+  <!-- tags components -->
+  <app-tags></app-tags>
+  <!-- tags components -->
+  <!-- if not found data or any item in cart -->
+  <app-not-found-data
+    [visiable]="!foods || !foods.length"
+    message="No Result Found"
+    linkText="Reset Search"
+    link="/foods"
+  ></app-not-found-data>
+  <!-- foods data -->
+  <div class="foods">
+    <div *ngFor="let food of foods">
+    <app-food-item [food]="food"></app-food-item>
+    </div>
+  </div>
+</div>

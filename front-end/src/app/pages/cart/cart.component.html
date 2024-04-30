@@ -1,0 +1,61 @@
+<div class="container">
+  <h4 class="page_title">Cart Page</h4>
+  <!-- if not found data or any item in cart -->
+  <app-not-found-data
+    [visiable]="!cart || !cart.items.length"
+    message="Cart Is Empty"
+    linkText="Go To Find Food"
+  ></app-not-found-data>
+  <!-- cart data -->
+  <div *ngIf="cart.items.length" class="cart">
+    <div class="cart_items">
+      <div class="cart_item" *ngFor="let cartItem of cart.items">
+        <a routerLink="/food/{{ cartItem.food.id }}" class="cart_item_data">
+          <!-- item image -->
+          <img
+            src="{{ image_src + cartItem.food.imageUrl }}"
+            alt="{{ cartItem.food.name }}"
+          />
+          <!-- name of food -->
+          <div class="food_name">{{ cartItem.food.name }}</div>
+        </a>
+        <!-- select quantity -->
+        <select
+          #selectedQuantity
+          (change)="changeItemQuantity(cartItem, selectedQuantity.value)"
+          [value]="cartItem.quantity"
+        >
+          <option
+            *ngFor="let quntityOption of quntityOptions"
+            [value]="quntityOption"
+          >
+            {{ quntityOption }}
+          </option>
+        </select>
+        <!-- price -->
+        <span class="cart_item_price">{{ cartItem.price | currency }}</span>
+        <!-- remove icon -->
+        <div class="remove_icons" (click)="removeFromCart(cartItem)">
+          <fa-icon [icon]="faTrash"></fa-icon>
+        </div>
+      </div>
+    </div>
+    <!-- checkout -->
+    <div class="summary">
+      <ul>
+        <li>Item: {{ cart.totalCount }}</li>
+        <li class="cart_items_price">
+          Total: {{ cart.totalPrice | currency }}
+        </li>
+      </ul>
+      <!-- if user exist go to checkout -->
+      <button *ngIf="user.email" class="checkout_btn" routerLink="/checkout">
+        Checkout
+      </button>
+      <!-- if user not exist go to login -->
+      <button *ngIf="!user.email" class="checkout_btn" routerLink="/login">
+        Checkout
+      </button>
+    </div>
+  </div>
+</div>
