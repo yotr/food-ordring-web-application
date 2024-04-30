@@ -1,0 +1,18 @@
+<section>
+  <div class="section_head">
+    <h1>What We`re Craving Now</h1>
+  </div>
+  <div class="section_content">
+    <div class="items">
+      <!-- item -->
+      <div class="item" *ngFor="let item of cravingItems" [ngStyle]="{backgroundColor: item.bg}">
+        <img src="{{ item.image }}" alt="food_img" />
+        <div class="item_footer">
+          <button class="item_btn" routerLink="/{{ item.link }}">Photos</button>
+          <div class="title">{{ item.title }}</div>
+        </div>
+      </div>
+      <!-- item -->
+    </div>
+  </div>
+</section>

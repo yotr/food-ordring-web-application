@@ -1,0 +1,99 @@
+header {
+  position: relative;
+  background-color: var(--second-color);
+  /* padding: 0.5em 0; */
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+}
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right_side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .big_screen_menu_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+nav .big_screen_menu_list li {
+  position: relative;
+}
+nav .big_screen_menu_list li span:hover {
+  color: var(--first-color);
+}
+nav .big_screen_menu_list li span {
+  cursor: pointer;
+  padding: 10px;
+}
+nav .big_screen_menu_list .menu-container {
+  position: relative;
+}
+nav .big_screen_menu_list .menu-container .menu {
+  position: absolute;
+  z-index: 9999;
+  background-color: var(--second-color);
+  padding: 20px;
+  display: none;
+  top: 150%;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+nav .big_screen_menu_list .menu-container:hover .menu {
+  display: block;
+}
+nav .big_screen_menu_list .menu-container .menu .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+nav .big_screen_menu_list .menu-container .menu .links span {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+nav .cart_content .cart {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+nav .cart_content .cart .cart_no {
+  padding: 0;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: var(--first-color);
+  width: 25px;
+  height: 25px;
+  color: var(--second-color);
+  border: 1px solid var(--second-color);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  nav .big_screen_menu_list {
+    display: none;
+  }
+}
