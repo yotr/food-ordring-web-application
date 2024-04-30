@@ -9,18 +9,18 @@
 ```
 ## Application View Web
 ### Home
-![Alt text](public/home.png)
+![Alt text](front-end/public/home.png)
 
 ### Foods
-![Alt text](public/foods.png)
+![Alt text](front-end/public/foods.png)
 ### Food
-![Alt text](public/food.png)
+![Alt text](front-end/public/food.png)
 ### Cart
-![Alt text](public/cart.png)
+![Alt text](front-end/public/cart.png)
 ### Login
-![Alt text](public/login.png)
+![Alt text](front-end/public/login.png)
 ### Register
-![Alt text](public/register.png)
+![Alt text](front-end/public/register.png)
 
 ## Application View Mobile
 ### Mobile
